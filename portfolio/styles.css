@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px 10px 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(127, 165, 254);
+    color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+}
+
+.links a{
+    color: white;
+    padding-left: 5px;
+    text-decoration: none;
+}
