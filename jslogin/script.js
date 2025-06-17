@@ -34,6 +34,7 @@ const registerForm = () => {
     <p><input type="text" placeholder="Username" id="txtname" /></p>
     <p><input type="email" placeholder="Email" id="txtemail"/></p>
     <p><input type="password" placeholder="Password" id="txtpassword"/></p>
+    <p><input type="text" placeholder="Balance" id="txtbalance"/></p>
     <p><button onclick="saveUser()">Submit</button></p>
     <p><button onclick="loginForm()">Already a member? Login</button></p>
   `
@@ -43,7 +44,8 @@ const registerForm = () => {
 const showHome = () => {
   const str = `
     <h2>Home Page</h2>
-    <p>Welcome ${user.name}</p>
+    <p>Welcome ${user.name}!</p>
+    <p>BAlance: ${user.balance}</p>
     <p><button onclick="logout()">Logout</button></p>
   `
   root.innerHTML = str
@@ -59,8 +61,9 @@ const saveUser = () => {
   let name = document.getElementById('txtname').value.trim()
   let email = document.getElementById('txtemail').value.trim()
   let password = document.getElementById('txtpassword').value.trim()
-  if (name && email && password) {
-    let newUser = { name, email, password }
+  let balance = document.getElementById('txtbalance').value.trim()
+  if (name && email && password && balance) {
+    let newUser = { name, email, password, balance }
     users.push(newUser)
     user = newUser
     loginForm()
@@ -76,6 +79,7 @@ const updateInfo = () => {
       <p>Username: ${user.name}</p>
       <p>Email: ${user.email}</p>
       <p>Password: ${user.password}</p>
+       <p>Balance: ${user.balance}</p>
     `
   } else {
     info.innerHTML = ''
