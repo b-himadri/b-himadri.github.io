@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            background-color: lightgray;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .child{
+            background-color: lightgreen;
+            width: 200px;
+            height: 200px;
+            border: 2px solid darkgreen;
+        }
+
+        .flex{
+            display: flex;
+            /* flex-wrap: wrap; */
+            justify-content: center;
+
+            gap: 10px;
+            background-color: lightcoral;
+            padding: 10px;
+        }
+
+        .flex div{
+            background-color: lightyellow;
+            padding: 20px;
+            border: 2px solid darkorange;
+            flex: 1; 
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+     <h2>Flex Box</h2>
+    <div class="flex">
+        <div>Child1</div>
+        <div>Child2</div>
+        <div>Child3</div>
+        <div>Child4</div>
+        <div>Child5</div>
+        <div>Child6</div>
+    </div>
+
+    <h2>Grid Box</h2>
+    <div class="grid">
+        <div>Child1</div>
+        <div>Child2</div>
+        <div>Child3</div>
+        <div>Child4</div>
+        <div>Child5</div>
+        <div>Child6</div>
+    </div>
+
+
+
+    
+</body>
+</html>

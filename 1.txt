@@ -1,0 +1,3 @@
+
+mongosh "mongodb://localhost:27018,localhost:27019,localhost:27020/hdfc
+//sharding in mongodb
